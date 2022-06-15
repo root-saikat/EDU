@@ -224,13 +224,60 @@ header{
     gap: 18px;
 }
 
+.crs-bx-img{
+    position: relative;
+}
+.crs-bx-img i{
+    /* position: absolute;
+    top: 40%;
+    left: 40%; */
+    border-radius:50% ;
+    background: #002147;
+    color: white;
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    /* display: none; */
+}
+.crs-i{
+    background: #fdc600bb;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    display: none;
+}
+.crs-bx-img:hover .crs-i{
+    display: grid;
+}
+
 .ft-box {
     background: white;
 }
-
+.ft-bx-img{
+    width: 270px;
+    height: 280px;
+    overflow: hidden;
+    
+}
 .ft-box img{
+    width: 100%;
+    height: 194.38px;
+    object-fit: cover;
+}
+
+.jmin img{
     width: 270px;
     height: 194.38px;
+    transition: transform 2s;
+}
+
+.jmin img:hover{
+   transform: scale(1.3);
 }
 .ft-box-txt{
     padding: 25px 15px;
@@ -310,6 +357,61 @@ line-height: 1.5;
     margin: 0 auto; 
     font-size: 1.5rem;
 }
+.playv {
+    width: fit-content;
+    margin: 0 auto;
+    cursor:pointer;
+}
+/* .video{
+    position: fixed;
+    top: 100px;
+    left:18%;
+    z-index: 6;
+    
+} */
+.video{
+    position: fixed;
+top: 0;
+left: 0;
+z-index: 6;
+width: 100%;
+height: 100%;
+background:#001940c5;
+/* display: none; */
+max-width: 0;
+}
+.vd{
+    position: relative;
+    position: relative;
+margin: 82px auto;
+width: 70%;
+}
+.vd video{
+    width: 100%;
+}
+.vd i{
+    position: absolute;
+    top: -12px;
+    right: 0;
+    /* background: #FDC800; */
+    color: #FDC800;
+    cursor: pointer;
+}
+
+.show{
+    max-width: 100%;
+}
+
+.hide{
+    max-width: 0;
+}
+/* .close{
+  display: none; 
+} */
+
+
+
+
 
 
 /* Our Skilled Lecturers */
@@ -420,6 +522,21 @@ color: #fdc800;
 .ev-bdy-1{
     background: white;
     padding: 20px;
+    animation: bounce 1s linear;
+}
+@keyframes bounce{
+    20%,50%,80%,to{
+        transform: translateY(0);
+    }
+    40%{
+        transform: translateY(-30px);
+    }
+    70%{
+        transform: translateY(-15px);
+    }
+    /* 90%{
+        transform: translateY(-4px);
+    } */
 }
 .ev-bdy-1 img{
     height: min-content;
@@ -476,12 +593,37 @@ color: #fdc800;
 
 /* brand-aria */
 #brand-aria{
-    padding: 70px 17px;
+    padding: 30px 17px;
+    /* padding-bottom: 0; */
     display: flex;
     justify-content: space-between;
 }
-
-
+.brndcon {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+    align-items: center;
+}
+.swiper-slide{
+    display: flex;
+    justify-content: space-between;
+}
+.slim img{
+    width: 240px;
+    height: 140px;
+}
+.lstswiper {
+    padding-bottom: 0;
+}
+.swiper{
+    padding-bottom: 0;
+}
+.st-say-body {
+    padding-bottom: 70px;
+}
+.swiper.lstswiper.swiper-initialized.swiper-horizontal.swiper-pointer-events.swiper-backface-hidden {
+    padding-bottom: 0;
+}
 
 /* students-say-area */
 
@@ -510,11 +652,12 @@ color: #fdc800;
 .st-say-box{
     display: flex;
     justify-content: space-between;
+    /* padding: 1%; */
 }
 .sy-bx-l{
     display: flex;
     flex-direction: column;
-
+    position: relative;
 }
 
 .sy-bx-l a{
@@ -543,12 +686,26 @@ color: #fdc800;
 .item-p{
     padding: 30px 130px 30px 30px;
     color:#646464;
+    background: #F8F8F8;
 }
 
 .sy-bx-pic {
     padding-top: 7%;
+    position: absolute;
+    right: 30px;
 }
-
+.sy-bx-pic img {
+    border: 10px solid white;
+}
+.swiper{
+    padding-bottom: 70px;
+}
+.swiper-pagination-clickable .swiper-pagination-bullet {
+    cursor: pointer;
+    width: 20px;
+    height: 10px;
+    border-radius: 4px;
+}
 
 /* .students-join1-area */
 

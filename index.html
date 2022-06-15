@@ -5,8 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EDU</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="css.css">
     <script src="https://kit.fontawesome.com/0741ba60a7.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
     <div id="container">
@@ -83,8 +88,13 @@
             </div>
         </div>
         <div class="Featured-body">
-            <div class="ft-box">
-                <img src="img/ft-bx1.jpg" alt="">
+            <div class="ft-box crs-bx">
+                <div class="crs-bx-img">
+                    <img src="img/ft-bx1.jpg" alt="">
+                    <div class="crs-i">
+                        <i class="fa-solid fa-link"></i>
+                    </div>
+                </div>
                 <div class="ft-box-txt">
                     <h2>Basic Philosopphy</h2>
                     <p>Rmply dummy text printing setting industry it’s free demo.</p>
@@ -105,8 +115,13 @@
                     </div>
                 </div>
             </div>
-            <div class="ft-box">
-                <img src="img/ft-bx2.jpg" alt="">
+            <div class="ft-box crs-bx">
+                <div class="crs-bx-img">
+                    <img src="img/ft-bx2.jpg" alt="">
+                    <div class="crs-i">
+                        <i class="fa-solid fa-link"></i>
+                    </div>
+                </div>
                 <div class="ft-box-txt">
                     <h2>GMAT</h2>
                     <p>Rmply dummy text printing setting industry it’s free demo.</p>
@@ -127,8 +142,13 @@
                     </div>
                 </div>
             </div>
-            <div class="ft-box">
-                <img src="img/ft-bx3.jpg" alt="">
+            <div class="ft-box crs-bx">
+                <div class="crs-bx-img">
+                    <img src="img/ft-bx3.jpg" alt="">
+                    <div class="crs-i">
+                        <i class="fa-solid fa-link"></i>
+                    </div>
+                </div>
                 <div class="ft-box-txt">
                     <h2>IELTS</h2>
                     <p>Rmply dummy text printing setting industry it’s free demo.</p>
@@ -149,8 +169,13 @@
                     </div>
                 </div>
             </div>
-            <div class="ft-box">
-                <img src="img/ft-bx4.jpg" alt="">
+            <div class="ft-box crs-bx">
+                <div class="crs-bx-img">
+                    <img src="img/ft-bx4.jpg" alt="">
+                    <div class="crs-i">
+                        <i class="fa-solid fa-link"></i>
+                    </div>
+                </div>
                 <div class="ft-box-txt">
                     <h2>Regular MBA</h2>
                     <p>Rmply dummy text printing setting industry it’s free demo.</p>
@@ -179,7 +204,20 @@
             <h2>Watch Campus Life Video Tour</h2>
             <p>Vmply dummy text of the printing and typesetting industryorem
             Ipsum industry's standard dum an unknowramble.</p>
-            <i class="fa-solid fa-play"></i>
+            <div class="playv" onclick="vdotoggle()">
+                <i class="fa-solid fa-play"></i>
+            </div>
+        </div>
+
+        <div class="video">
+            
+            <div class="vd">
+                <iframe width="100%" height="480" src="https://www.youtube.com/embed/Hulk2w6-624?start=361" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <!-- <video width="830" height="480" controls>
+                    <source src="video/rolling.mp4" type="video/mp4">
+                </video> -->
+                <i class="fa-solid fa-circle-xmark closex" onclick="closetoggle()"></i>
+            </div>
         </div>
      </section>
 
@@ -193,7 +231,9 @@
         </div>
         <div class="Featured-body">
             <div class="ft-box lt-bx">
-                <img src="img/lec1.jpg" alt="">
+                <div class="ft-bx-img jmin">
+                    <img src="img/lec1.jpg" alt="">
+                </div>
                 <div class="ft-box-txt lt-bx-txt">
                     <h2>Rosy Janner</h2>
                     <p>Senior Finance Lecturer</p>
@@ -206,7 +246,9 @@
                 </div>
             </div>
             <div class="ft-box lt-bx">
-                <img src="img/lec2.jpg" alt="">
+                <div class="ft-bx-img jmin">
+                    <img src="img/lec2.jpg" alt="">
+                </div>
                 <div class="ft-box-txt lt-bx-txt">
                     <h2>Mike Hussy</h2>
                     <p>Senior Finance Lecturer</p>
@@ -219,7 +261,9 @@
                 </div>
             </div>
             <div class="ft-box lt-bx">
-                <img src="img/lec3.jpg" alt="">
+                <div class="ft-bx-img jmin">
+                    <img src="img/lec3.jpg" alt="">
+                </div>
                 <div class="ft-box-txt lt-bx-txt">
                     <h2>Daziy Millar</h2>
                     <p>Senior Finance Lecturer</p>
@@ -232,7 +276,9 @@
                 </div>
             </div>
             <div class="ft-box lt-bx">
-                <img src="img/lec4.jpg" alt="">
+                <div class="ft-bx-img jmin">
+                    <img src="img/lec4.jpg" alt="">
+                </div>
                 <div class="ft-box-txt lt-bx-txt">
                     <h2>Kazi Fahim</h2>
                     <p>Senior Finance Lecturer</p>
@@ -323,7 +369,7 @@
      <section id="number">
         <div class="number-sdw">
             <div class="nmbr-box">
-                <h1>80</h1>
+                <h1 class="num" data-val="80" >00</h1>
 
                 <div class="nbr">
                     <span>PROFESSIONAL</span>
@@ -331,21 +377,21 @@
                 </div>
             </div>
             <div class="nmbr-box">
-                <h1>20</h1>
+                <h1 class="num" data-val="20" >00</h1>
                 <div class="nbr">
                     <span>NEWS COURSES</span>
                     <span>EVERY YEARS</span>
                 </div>
             </div>
             <div class="nmbr-box">
-                <h1>56</h1>
+                <h1 class="num" data-val="56">00</h1>
                 <div class="nbr">
                     <span>NEWS COURSES</span>
                     <span>EVERY YEARS</span>
                 </div>
             </div>
             <div class="nmbr-box">
-                <h1>77</h1>
+                <h1 class="num" data-val="77">00</h1>
                 <div class="nbr">
                     <span>REGISTERED</span>
                     <span>STUDENTS</span>
@@ -358,45 +404,88 @@
            <div class="st-say-hdr">
             <span>What Our Students Say</span>
            </div>
-           <div class="st-say-body">
-            <div class="st-say-box">
-                <div class="sy-bx-l">
-                      <a href="">Rosy Janner</a>
-                      <span>UI Designer</span>
-                      <div class="str-bx">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                      </div>
-                      <div class="item-p">
-                        <p>Pellentesque tellus arcu, laoreet volutpavenenatis molestPellentesque commodo lorem lectus pretium vehicula.</p>
-                      </div>
+           <div class="st-say-body swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="st-say-box swiper-slide">
+                    <div class="sy-bx-l">
+                          <a href="">Rosy Janner</a>
+                          <span>UI Designer</span>
+                          <div class="str-bx">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </div>
+                          <div class="item-p">
+                            <p>Pellentesque tellus arcu, laoreet volutpavenenatis molestPellentesque commodo lorem lectus pretium vehicula.</p>
+                          </div>
+                    </div>
+                    <div class="sy-bx-pic">
+                        <img src="img/stu1.jpg" alt="">
+                    </div>
                 </div>
-                <div class="sy-bx-pic">
-                    <img src="img/stu1.jpg" alt="">
+                <div class="st-say-box swiper-slide">
+                    <div class="sy-bx-l">
+                          <a href="">Rosy Janner</a>
+                          <span>UI Designer</span>
+                          <div class="str-bx">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </div>
+                          <div class="item-p">
+                            <p>Pellentesque tellus arcu, laoreet volutpavenenatis molestPellentesque commodo lorem lectus pretium vehicula.</p>
+                          </div>
+                    </div>
+                    <div class="sy-bx-pic">
+                        <img src="img/stu2.jpg" alt="">
+                    </div>
                 </div>
-            </div>
-            <div class="st-say-box">
-                <div class="sy-bx-l">
-                      <a href="">Rosy Janner</a>
-                      <span>UI Designer</span>
-                      <div class="str-bx">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                      </div>
-                      <div class="item-p">
-                        <p>Pellentesque tellus arcu, laoreet volutpavenenatis molestPellentesque commodo lorem lectus pretium vehicula.</p>
-                      </div>
+                <div class="st-say-box swiper-slide">
+                    <div class="sy-bx-l">
+                          <a href="">Rosy Janner</a>
+                          <span>UI Designer</span>
+                          <div class="str-bx">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </div>
+                          <div class="item-p">
+                            <p>Pellentesque tellus arcu, laoreet volutpavenenatis molestPellentesque commodo lorem lectus pretium vehicula.</p>
+                          </div>
+                    </div>
+                    <div class="sy-bx-pic">
+                        <img src="img/stu2.jpg" alt="">
+                    </div>
                 </div>
-                <div class="sy-bx-pic">
-                    <img src="img/stu2.jpg" alt="">
+                <div class="st-say-box swiper-slide">
+                    <div class="sy-bx-l">
+                          <a href="">Rosy Janner</a>
+                          <span>UI Designer</span>
+                          <div class="str-bx">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </div>
+                          <div class="item-p">
+                            <p>Pellentesque tellus arcu, laoreet volutpavenenatis molestPellentesque commodo lorem lectus pretium vehicula.</p>
+                          </div>
+                    </div>
+                    <div class="sy-bx-pic">
+                        <img src="img/stu2.jpg" alt="">
+                    </div>
                 </div>
-            </div>
+              </div>
+
+              <div class="swiper-pagination"></div>
+            
            </div>
     </section>
 
@@ -436,10 +525,22 @@
     </section>
 
     <section id="brand-aria">
-        <img src="img/brnd1.jpg" alt="">
-        <img src="img/brnd2.jpg" alt="">
-        <img src="img/brnd3.jpg" alt="">
-        <img src="img/brnd4.jpg" alt="">
+        <div class="swiper lstswiper">
+            <div class="swiper-wrapper brndcon">
+                <div class="swiper-slide slim">
+                    <img src="img/brnd1.jpg" alt="">
+                    <img src="img/brnd2.jpg" alt="">
+                    <img src="img/brnd3.jpg" alt="">
+                    <img src="img/brnd4.jpg" alt="">
+                </div>
+                <div class="swiper-slide slim">
+                    <img src="img/brnd1.jpg" alt="">
+                    <img src="img/brnd2.jpg" alt="">
+                    <img src="img/brnd3.jpg" alt="">
+                    <img src="img/brnd4.jpg" alt="">
+                </div>
+            </div>
+        </div>
     </section>
 
     <footer>
@@ -542,8 +643,40 @@
         </div>
     </footer>
 
+    </div>
+
+    <script src="jscript.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- //  slider students say -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            autoplay: {
+            delay: 3000,
+            },
+            slidesPerView: 2,
+            spaceBetween: 30,
+            slidesPerGroup: 1,
+            loop: true,
+            loopFillGroupWithBlank: false,
+            pagination: {
+            el: ".swiper-pagination",
+            clickable: true
+            }
+    });
+    </script>
+    <!-- slider brands section -->
+    <script>
+        var swiper = new Swiper(".lstswiper", {
+            autoplay: true,
+            slidesPerView: 1,
+            // spaceBetween: 30,
+            slidesPerGroup: 1,
+            loop: true,
+            loopFillGroupWithBlank: false,
+    });
+    </script>
     
 
-    </div>
 </body>
 </html>
