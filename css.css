@@ -1065,6 +1065,9 @@ cursor: pointer;
         display: grid;
         width: 100%;
     }
+    .ev-bdy-1 img {
+        height: auto;
+    }
 
 
 
