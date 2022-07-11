@@ -1073,3 +1073,15 @@ cursor: pointer;
 
 
 }
+
+
+@media screen and (min-width: 1700px){
+  .photo-grid {
+    padding: 27px;
+    grid-template-rows: auto;
+  }
+  .number-sdw {
+    grid-template-columns: repeat(auto-fill, minmax(358px, 1fr));
+    gap: 10px;
+   }
+}
