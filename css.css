@@ -413,6 +413,12 @@ height: 80%;
     width: 100%;
 }
 
+.vd iframe{
+    width: 100%;
+    height: 80%;
+    border: none;
+}
+
 
 .vd i{
     position: absolute;
